@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>InventoryManager.App</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LM1 - Copy.png" />
+    <None Remove="LM1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="chilkat-x64" Version="9.5.0.88" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="19.2.0.59" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="19.2.0.59" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="19.2.0.60" />
+    <PackageReference Include="Syncfusion.SfKanban.WPF" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.SfSchedule.WPF" Version="18.3.0.53" />
+    <PackageReference Include="Syncfusion.SfScheduler.WPF" Version="19.2.0.60" />
+    <PackageReference Include="Syncfusion.Themes.MaterialDark.WPF" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="19.2.0.62" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LM1 - Copy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LM1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
