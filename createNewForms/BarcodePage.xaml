@@ -1,0 +1,40 @@
+﻿<Window x:Class="InventoryManager.BarcodePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InventoryManager" xmlns:sync1="clr-namespace:Syncfusion.UI.Xaml.Controls.Barcode;assembly=Syncfusion.SfBarcode.WPF"
+        mc:Ignorable="d"
+        Title="BarcodePage" Height="500" Width="800" WindowStartupLocation="CenterOwner" Background="SkyBlue">
+    <Grid>
+        <Label Content="Create Product Barcode" FontSize="25" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Product:" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <ComboBox Name="ProductLookUp" Width="200" Style="{DynamicResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="110 0 0 0" Background="White"/>
+        <Button x:Name="ShowBarcode" BorderBrush="CornflowerBlue" BorderThickness="1" Content="Create Barcode" Background="White" Height="50" Style="{DynamicResource MaterialDesignOutlinedButton}"
+                HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="110 0 0 40" Width="200" Click="ShowBarcode_Click"/>
+
+        <Border x:Name="Border" BorderBrush="Black" BorderThickness="1" Margin="586,80,30,44"/>
+        <StackPanel x:Name="barcodeBorder" Margin="596,84,41,92" Background="Transparent" Visibility="Hidden">
+
+            <sync1:SfBarcode x:Name="barcode" Text="  " Symbology="QRBarcode" Height="126" Width="128" Background="White">
+
+                <sync1:SfBarcode.SymbologySettings>
+
+                    <sync1:QRBarcodeSetting XDimension="8"/>
+
+                </sync1:SfBarcode.SymbologySettings>
+
+            </sync1:SfBarcode>
+            <Label Content="Date:" Width="50" Height="20" FontSize="9" HorizontalContentAlignment="Center"/>
+            <TextBlock x:Name="DateBox" Width="84" Height="20" FontSize="9" TextAlignment="Center" />
+            <Label Content="Product:" Width="50" Height="20" FontSize="9" HorizontalContentAlignment="Center"/>
+            <TextBlock x:Name="ProductBox" Width="75" Height="20" FontSize="9" TextAlignment="Center"/>
+            <Label Content="Location:" Width="50" Height="20" FontSize="9" HorizontalContentAlignment="Center"/>
+            <TextBlock x:Name="LocationBox" Width="75" Height="20" FontSize="9" TextAlignment="Center" Style="{DynamicResource MaterialDesignHeadline1TextBlock}" />
+
+        </StackPanel>
+
+        <Button x:Name="PrintBtn" Background="White" Content="Print Label" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="104" Height="34" Margin="0,0,70,52" Style="{DynamicResource MaterialDesignOutlinedButton}" Click="PrintBtn_Click"/>
+
+    </Grid>
+</Window>
